@@ -8,6 +8,7 @@ export const translations = {
       assets: '发行资产',
       tokenomics: '发行规则',
       industries: '十二产业',
+      olympians: '十二产业',
       enter: '进入终端',
       connect: '连接钱包',
     },
@@ -124,6 +125,7 @@ export const translations = {
       assets: '發行資產',
       tokenomics: '發行規則',
       industries: '十二產業',
+      olympians: '十二產業',
       enter: '進入終端',
       connect: '連接錢包',
     },
@@ -179,7 +181,7 @@ export const translations = {
         genesis: { 
           title: '創世發行 (頭礦)', 
           amount: '100 萬枚', 
-          desc: '作為生態啟動的創世憑證，早期參與者享有恆定兌換比例。頭礦售罄後將永久開啟價值飛輪。',
+          desc: '作為生態啟動的創世憑證，早期參與者享有恒定兑换比例。头矿售罄后将永久开启价值飞轮。',
           price: '當前價格: 1 USDT / SEPT',
           action: '立即認購 (Buy Now)' 
         },
@@ -240,6 +242,7 @@ export const translations = {
       assets: 'Issue Assets',
       tokenomics: 'Tokenomics',
       industries: '12 Industries',
+      olympians: '12 Industries',
       enter: 'Open Terminal',
       connect: 'Connect Wallet',
     },

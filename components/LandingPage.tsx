@@ -239,7 +239,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnterApp }) => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {Object.entries(t.olympians.gods).map(([key, god]) => {
+            {Object.entries(t.olympians.gods).map(([key, data]) => {
+              const god = data as { name: string; industry: string; desc: string };
               const config = getGodConfig(key);
               const Icon = config.icon;
               return (
