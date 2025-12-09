@@ -1,3 +1,4 @@
+
 export interface Proposal {
   id: string;
   title: string;
@@ -19,7 +20,8 @@ export interface Asset {
 
 export enum ViewState {
   LANDING = 'LANDING',
-  DASHBOARD = 'DASHBOARD'
+  DASHBOARD = 'DASHBOARD',
+  INDUSTRIES = 'INDUSTRIES'
 }
 
 export type Language = 'zh_CN' | 'zh_TW' | 'en';

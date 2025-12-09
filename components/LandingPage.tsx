@@ -4,10 +4,14 @@ import { Icons } from './Icons';
 import NetworkBackground from './NetworkBackground';
 import { useLanguage } from '../contexts/LanguageContext';
 import { useTheme } from '../contexts/ThemeContext';
-import { Language } from '../types';
+import { Language, ViewState } from '../types';
 import LazyImage from './LazyImage';
 
-const LandingPage: React.FC = () => {
+interface LandingPageProps {
+  onNavigate: (view: ViewState) => void;
+}
+
+const LandingPage: React.FC<LandingPageProps> = ({ onNavigate }) => {
   const { t, language, setLanguage } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
@@ -249,7 +253,10 @@ const LandingPage: React.FC = () => {
                    <div className="text-xs text-slate-400 dark:text-slate-400 mb-1 font-mono uppercase">Allocation</div>
                    <div className="text-lg font-bold text-blue-400 dark:text-blue-400 font-mono">1M / Sector</div>
                 </div>
-                <button className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg">
+                <button 
+                  onClick={() => onNavigate(ViewState.INDUSTRIES)}
+                  className="w-full py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold uppercase tracking-wider text-sm transition-colors rounded-sm shadow-lg"
+                >
                    {t.tokenomics.sections.industries.action}
                 </button>
              </div>
@@ -303,7 +310,7 @@ const LandingPage: React.FC = () => {
              className="h-10 w-10 mx-auto mb-6"
              imageClassName="object-contain opacity-50 dark:invert-0 invert grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
            />
-          <p className="text-slate-400 dark:text-slate-400 text-sm font-mono tracking-widest uppercase">&copy; 2024 International Esports Committee. All Rights Reserved.</p>
+          <p className="text-slate-400 dark:text-slate-400 text-sm font-mono tracking-widest uppercase">&copy; 2025 International Esports Committee. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
